@@ -1,0 +1,34 @@
+<svg viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg" style="background: #0a0b0e; border-radius: 12px; width: 100%; height: auto;">
+  <style>
+    .label { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #ffffff; text-anchor: middle; font-weight: bold; letter-spacing: 1px; }
+    .sub { font-family: 'Space Grotesk', sans-serif; font-size: 10px; fill: #64748b; text-anchor: middle; }
+    .line { stroke: rgba(255, 255, 255, 0.12); stroke-width: 2; }
+  </style>
+
+  <!-- Línea conectora central -->
+  <line x1="150" y1="90" x2="750" y2="90" class="line" stroke-dasharray="4,4"/>
+
+  <!-- NODO 1: MACROESTRUCTURA -->
+  <g transform="translate(150, 90)">
+    <circle r="35" fill="none" stroke="#ccff00" stroke-width="2" stroke-dasharray="6,3"/>
+    <circle r="6" fill="#ccff00"/>
+    <text x="0" y="55" class="label">MACROESTRUCTURA</text>
+    <text x="0" y="70" class="sub">Contexto general y obra</text>
+  </g>
+
+  <!-- NODO 2: MICROESTRUCTURA -->
+  <g transform="translate(450, 90)">
+    <rect x="-30" y="-30" width="60" height="60" rx="6" fill="none" stroke="#ff4d00" stroke-width="2" transform="rotate(45)"/>
+    <circle r="6" fill="#ff4d00"/>
+    <text x="0" y="55" class="label">MICROESTRUCTURA</text>
+    <text x="0" y="70" class="sub">Aforismos y eudemonemas</text>
+  </g>
+
+  <!-- NODO 3: INTENCIÓN -->
+  <g transform="translate(750, 90)">
+    <circle r="35" fill="none" stroke="#ffb703" stroke-width="2"/>
+    <polygon points="0,-15 12,8 -12,8" fill="#ffb703"/>
+    <text x="0" y="55" class="label">INTENCIÓN</text>
+    <text x="0" y="70" class="sub">Propósito eudemonológico</text>
+  </g>
+</svg>
