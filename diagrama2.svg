@@ -1,0 +1,39 @@
+<svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" style="background: #0a0b0e; border-radius: 16px; width: 100%; height: auto;">
+  <style>
+    .title { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: bold; text-transform: uppercase; }
+    .desc { font-family: 'Space Grotesk', sans-serif; font-size: 12px; fill: #94a3b8; }
+    .card-bg { fill: rgba(18, 20, 26, 0.75); stroke: rgba(255, 255, 255, 0.08); stroke-width: 1; rx: 12px; }
+  </style>
+
+  <!-- Tarjeta 1: El Erizo (Relaciones) -->
+  <g transform="translate(30, 30)">
+    <rect width="260" height="220" class="card-bg"/>
+    <path d="M 40 50 L 60 30 L 70 50 L 90 30 L 100 50 L 120 30 L 130 50" fill="none" stroke="#ccff00" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="85" cy="85" r="25" fill="none" stroke="#ccff00" stroke-dasharray="4,4"/>
+    <text x="30" y="140" class="title" fill="#ccff00">01. La Parábola del Erizo</text>
+    <text x="30" y="170" class="desc">Símbolo de la distancia social:</text>
+    <text x="30" y="190" class="desc">prudencia en el trato humano.</text>
+  </g>
+
+  <!-- Tarjeta 2: El Tesoro (Personalidad) -->
+  <g transform="translate(320, 30)">
+    <rect width="260" height="220" class="card-bg"/>
+    <rect x="75" y="40" width="60" height="50" rx="4" fill="none" stroke="#ff4d00" stroke-width="2"/>
+    <path d="M 75 60 L 135 60" stroke="#ff4d00" stroke-width="2"/>
+    <circle cx="105" cy="65" r="5" fill="#ff4d00"/>
+    <text x="30" y="140" class="title" fill="#ff4d00">02. La Riqueza Interior</text>
+    <text x="30" y="170" class="desc">Lo que uno es (personalidad)</text>
+    <text x="30" y="190" class="desc">supera a lo que uno tiene.</text>
+  </g>
+
+  <!-- Tarjeta 3: El Péndulo (Existencia) -->
+  <g transform="translate(610, 30)">
+    <rect width="260" height="220" class="card-bg"/>
+    <line x1="105" y1="35" x2="105" y2="75" stroke="#ffb703" stroke-width="2"/>
+    <circle cx="105" cy="85" r="12" fill="none" stroke="#ffb703" stroke-width="2"/>
+    <path d="M 85 45 Q 105 30 125 45" fill="none" stroke="#ffb703" stroke-dasharray="2,2"/>
+    <text x="30" y="140" class="title" fill="#ffb703">03. El Péndulo Vital</text>
+    <text x="30" y="170" class="desc">Oscilación constante entre el</text>
+    <text x="30" y="190" class="desc">dolor y el aburrimiento.</text>
+  </g>
+</svg>
