@@ -1,0 +1,79 @@
+/* --- 1. SOPORTE DE TRANSICIÓN NATIVA (Sin borrar nada de tu diseño) --- */
+@view-transition { navigation: auto; }
+
+/* --- 2. IMPORTACIONES Y VARIABLES --- */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg-dark: #0a0b0e;
+  --panel-bg: rgba(18, 20, 26, 0.75);
+  --text-main: #f1f5f9;
+  --text-muted: #64748b;
+  --accent-orange: #ff4d00;
+  --accent-acid: #ccff00;
+  --accent-gold: #ffb703;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius-sharp: 4px;
+  --radius-blob: 24px 8px 32px 12px;
+  --radius-card: 16px;
+}
+
+html { scroll-behavior: smooth; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(255, 77, 0, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(204, 255, 0, 0.08) 0px, transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* --- 3. HEADER Y NAVEGACIÓN --- */
+header {
+  background: rgba(10, 11, 14, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+
+.logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: -1px; text-decoration: none; }
+.logo span { color: var(--accent-orange); }
+
+nav ul { display: flex; gap: 1.5rem; list-style: none; }
+nav a { font-family: var(--font-mono); color: var(--text-muted); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; position: relative; padding-bottom: 4px; transition: color 0.2s ease; }
+nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 2px; background-color: var(--accent-acid); transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1); }
+nav a:hover, nav a.active { color: var(--accent-acid); }
+nav a:hover::after, nav a.active::after { width: 100%; }
+
+/* --- 4. HERO SECTION --- */
+.hero { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 3rem; align-items: center; }
+.hero-title { font-family: var(--font-display); font-size: 4.2rem; line-height: 1.05; font-weight: 800; text-transform: uppercase; letter-spacing: -2px; margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; }
+.hero-title .letter { display: inline-block; }
+.hero-subtitle { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 500px; }
+
+.cta-button-read { display: inline-flex; align-items: center; gap: 0.75rem; font-family: var(--font-mono); text-transform: uppercase; font-weight: 700; font-size: 0.85rem; color: #000; background: var(--accent-acid); padding: 1.1rem 2.2rem; text-decoration: none; border-radius: var(--radius-sharp); border: 2px solid #000; box-shadow: 4px 4px 0px #000, 4px 4px 0px 2px var(--accent-orange); }
+
+/* --- 5. CONTENIDO Y CARDS --- */
+.main-container { max-width: 1200px; margin: 0 auto 5rem; padding: 0 2rem; display: grid; grid-template-columns: 2fr 1fr; gap: 2.5rem; }
+.content-card { background: var(--panel-bg); border-radius: var(--radius-blob); padding: 3rem; margin-bottom: 2.5rem; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.8), 0 20px 40px rgba(0,0,0,0.4); }
+.content-card h2 { font-family: var(--font-display); font-size: 1.8rem; text-transform: uppercase; color: #fff; margin-bottom: 1rem; }
+
+.image-frame { width: 100%; height: 320px; background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)); border-radius: var(--radius-card); border: 1px solid rgba(255, 255, 255, 0.12); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+
+.breadcrumbs { max-width: 1200px; margin: 1.5rem auto 0; padding: 0.5rem 2rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); display: flex; gap: 0.5rem; }
+.breadcrumbs .separator { color: var(--accent-orange); }
+
+footer { border-top: 1px solid rgba(255, 255, 255, 0.08); padding: 3rem 2rem; text-align: center; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); }
